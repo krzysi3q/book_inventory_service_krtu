@@ -23,7 +23,7 @@ module.exports = function(stockRepository){
                         },
 
                         html: function(){
-                            res.send('<div>' + doc.count + '</div>');
+                            res.send('<div>avaliable: <strong>' + doc.count + '</strong></div>');
                         },
 
                         json: function(){
