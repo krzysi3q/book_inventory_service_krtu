@@ -11,6 +11,7 @@ describe('POST /stock', function() {
         }
         request(app)
         .post('/stock')
+        .set('Accept', 'application/json')
         .send(obj)
         .expect('Content-Type', /json/)
         .expect(200)
