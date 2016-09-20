@@ -11,7 +11,7 @@ describe('POST /stock', function() {
         }
         request(app)
         .post('/stock')
-        .set('Accept', 'application/json')
+        
         .send(obj)
         .expect('Content-Type', /json/)
         .expect(200)
@@ -37,6 +37,7 @@ describe('GET /stock/:isbn', function() {
         
         request(app)
         .get('/stock/1')
+        .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
         .expect(200, {count: 2}, done);
     });
