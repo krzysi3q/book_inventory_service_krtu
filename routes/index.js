@@ -19,7 +19,7 @@ module.exports = function(stockRepository){
                 } else {
                     res.format({
                         text: function(){
-                            res.send(doc.count);
+                            res.send(''+doc.count);
                         },
 
                         html: function(){
