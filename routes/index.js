@@ -17,7 +17,19 @@ module.exports = function(stockRepository){
                 if(doc === null){
                     clientError(req, res, next);
                 } else {
-                    res.json(doc);
+                    res.format({
+                        text: function(){
+                            res.send(doc.count);
+                        },
+
+                        html: function(){
+                            res.send('<div>' + doc.count + '</div>');
+                        },
+
+                        json: function(){
+                            res.json(doc);
+                        } 
+                    });
                 }
             })
         },
