@@ -2,7 +2,7 @@
 module.exports = function(stockRepository){
     return {
         root: function(req, res, next){
-            res.send('Hello World! from test');
+            res.send('Hello World! from pipeline');
         },
 
         getStockAll: function(req, res, next){
