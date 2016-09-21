@@ -26,8 +26,8 @@ var prod = {
         'app-alerting': { enabled: false } 
     },                                                                          
     formation: [ { process: 'web', quantity: 1, size: 'Free' } ],                                                     
-    log_drains: [],                                                                                                   
-    domains: [ 'krtu.herokuapp.com' ] 
+    log_drains: ['syslog://data.logentries.com:13636'],                                                                                                   
+    domains: [ 'krtu.herokuapp.com' ]
 }        
 
 configurator(prod);
